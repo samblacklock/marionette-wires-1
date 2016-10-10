@@ -1,9 +1,9 @@
-import {Route} from 'backbone-routing';
+import Orchestra from 'orchestra';
 import LibraryView from '../library/collection-view';
 import ViewerView from '../viewer/view';
 import storage from '../storage';
 
-export default Route.extend({
+export default Orchestra.Route.extend({
   initialize(options = {}) {
     this.layout = options.layout;
     this.listenTo(this, 'fetch', this.onFetch);

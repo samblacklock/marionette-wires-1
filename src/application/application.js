@@ -1,17 +1,17 @@
-import $ from 'jquery';
-import _ from 'lodash';
-import Radio from 'backbone.radio';
+import Orchestra from 'orchestra';
+const $ = Orchestra.$;
+const _ = Orchestra._;
+
 import nprogress from 'nprogress';
-import {Application} from 'backbone.marionette';
 import LayoutView from './layout-view';
 
-let routerChannel = Radio.channel('router');
+let routerChannel = Orchestra.Radio.channel('router');
 
 nprogress.configure({
   showSpinner: false
 });
 
-export default Application.extend({
+export default Orchestra.Application.extend({
   initialize() {
     this.$body = $(document.body);
     this.layout = new LayoutView();

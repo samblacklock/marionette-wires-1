@@ -1,10 +1,10 @@
-import _ from 'lodash';
-import {LayoutView} from 'backbone.marionette';
+import Orchestra from 'orchestra';
+
+const _ = Orchestra._;
 import CollectionView from './collection-view';
-import {Collection} from 'backbone';
 import template from './layout-template.hbs';
 
-export default LayoutView.extend({
+export default Orchestra.LayoutView.extend({
   template: template,
   className: 'colors colors--index container',
 
@@ -23,7 +23,7 @@ export default LayoutView.extend({
       .take(this.state.limit)
       .value();
 
-    this.filteredCollection = new Collection(filtered);
+    this.filteredCollection = new Orchestra.Collection(filtered);
   },
 
   onAttach() {

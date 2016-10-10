@@ -1,8 +1,8 @@
-import Storage from 'backbone.storage';
+import Orchestra from 'orchestra';
 import Model from './model';
 import Collection from './collection';
 
-var ColorsStorage = Storage.extend({
+const ColorsStorage = Orchestra.Storage.extend({
   model: Model,
   collection: Collection
 });

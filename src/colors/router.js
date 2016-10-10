@@ -1,4 +1,4 @@
-import {Router} from 'backbone-routing';
+import Orchestra from 'orchestra';
 import HeaderService from '../header/service';
 
 import IndexRoute from './index/route';
@@ -6,7 +6,7 @@ import CreateRoute from './create/route';
 import ShowRoute from './show/route';
 import EditRoute from './edit/route';
 
-export default Router.extend({
+export default Orchestra.Router.extend({
   initialize(options = {}) {
     this.container = options.container;
     this.listenTo(this, 'before:enter', this.onBeforeEnter);

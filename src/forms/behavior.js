@@ -1,7 +1,7 @@
+import Orchestra from 'orchestra';
 import Syphon from 'backbone.syphon';
-import {Behavior} from 'backbone.marionette';
 
-export default Behavior.extend({
+export default Orchestra.Behavior.extend({
   events: {
     'submit form' : 'handleSubmit'
   },

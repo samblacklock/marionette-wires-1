@@ -1,16 +1,16 @@
-var api = require('./api/api');
-var express = require('express');
-var path = require('path');
-var morgan = require('morgan');
+const api = require('./api/api');
+const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
 
-var argv = require('yargs')
+const argv = require('yargs')
             .usage('Start the server')
             .default('port', process.env.WEB_PORT || 1337)
             .alias('port', 'p')
             .describe('port', 'port to run on')
             .argv;
 
-var app = express();
+const app = express();
 app.use(express.static(path.join(__dirname, "/dist")));
 app.use(api);
 

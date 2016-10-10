@@ -1,8 +1,8 @@
-import Service from 'backbone.service';
+import Orchestra from 'orchestra';
 import Collection from './collection';
 import CollectionView from './collection-view';
 
-const FlashesService = Service.extend({
+const FlashesService = Orchestra.Service.extend({
   setup(options = {}) {
     this.container = options.container;
   },
@@ -25,7 +25,7 @@ const FlashesService = Service.extend({
   },
 
   remove(flash) {
-    var model = this.collection.findWhere(flash);
+    const model = this.collection.findWhere(flash);
     if (model) {
       model.destroy();
     }

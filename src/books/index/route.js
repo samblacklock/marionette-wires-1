@@ -1,8 +1,7 @@
-import {Route} from 'backbone-routing';
-import {history} from 'backbone';
+import Orchestra from 'orchestra';
 import storage from '../storage';
 
-export default Route.extend({
+export default Orchestra.Route.extend({
   initialize() {
     this.listenTo(this, 'enter', this.onEnter);
   },

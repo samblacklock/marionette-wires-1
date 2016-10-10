@@ -1,6 +1,6 @@
-import {Model, history} from 'backbone';
+import Orchestra from 'orchestra';
 
-export default Model.extend({
+export default Orchestra.Model.extend({
   defaults: {
     timeout: false,
     dismissible: true,
@@ -15,7 +15,7 @@ export default Model.extend({
     this.on('destroy', this._clearTimeout);
 
     if (this.get('clearOnRoute')) {
-      this.listenTo(history, 'route', this.destroy);
+      this.listenTo(Orchestra.history, 'route', this.destroy);
     }
   },
 

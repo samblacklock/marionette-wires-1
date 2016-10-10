@@ -1,7 +1,7 @@
-import {LayoutView} from 'backbone.marionette';
+import Orchestra from 'orchestra';
 import template from './layout-template.hbs';
 
-export default LayoutView.extend({
+export default Orchestra.LayoutView.extend({
   template: template,
   className: 'container',
   regions: {

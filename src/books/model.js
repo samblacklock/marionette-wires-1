@@ -1,6 +1,6 @@
-import {Model} from 'backbone';
+import Orchestra from 'orchestra';
 
-export default Model.extend({
+export default Orchestra.Model.extend({
   urlRoot: '/api/books',
   isActive() {
     return this.collection.active === this;

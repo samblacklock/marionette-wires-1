@@ -1,11 +1,10 @@
+import Orchestra from 'orchestra';
 import nprogress from 'nprogress';
-import {history} from 'backbone';
 import FormBehavior from '../../forms/behavior';
-import {ItemView} from 'backbone.marionette';
 import template from './template.hbs';
 import storage from '../storage';
 
-export default ItemView.extend({
+export default Orchestra.ItemView.extend({
   template: template,
   className: 'colors colors--edit container',
 

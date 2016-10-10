@@ -1,7 +1,7 @@
-import {ItemView} from 'backbone.marionette';
+import Orchestra from 'orchestra';
 import template from './item-template.hbs';
 
-export default ItemView.extend({
+export default Orchestra.ItemView.extend({
   tagName: 'a',
   template: template,
   className: 'colors__item list-group-item',

@@ -1,7 +1,7 @@
-import {Collection} from 'backbone';
+import Orchestra from 'orchestra';
 import Model from './model';
 
-export default Collection.extend({
+export default Orchestra.Collection.extend({
   url: '/api/books',
   model: Model
 });
