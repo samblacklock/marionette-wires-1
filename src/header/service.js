@@ -1,14 +1,13 @@
-import Service from 'backbone.service';
-import {Collection} from 'backbone';
+import Orchestra from 'orchestra';
 import View from './view';
 
-const HeaderService = Service.extend({
+const HeaderService = Orchestra.Service.extend({
   setup(options = {}) {
     this.container = options.container;
   },
 
   start() {
-    this.collection = new Collection();
+    this.collection = new Orchestra.Collection();
     this.view = new View({ collection: this.collection });
     this.container.show(this.view);
   },

@@ -1,8 +1,7 @@
-import {ItemView} from 'backbone.marionette';
-import {Model} from 'backbone';
+import Orchestra from 'orchestra';
 import template from './template.hbs';
 
-export default ItemView.extend({
+export default Orchestra.ItemView.extend({
   template: template,
   tagName: 'form',
 
@@ -11,7 +10,7 @@ export default ItemView.extend({
   },
 
   initialize(options = {}) {
-    this.model = new Model(options);
+    this.model = new Orchestra.Model(options);
   },
 
   triggers: {

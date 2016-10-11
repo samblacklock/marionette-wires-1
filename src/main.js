@@ -1,6 +1,6 @@
+import Orchestra from 'orchestra';
+
 import './plugins';
-import Backbone from 'backbone';
-import $ from 'jquery';
 
 import Application from './application/application';
 
@@ -11,6 +11,8 @@ import FlashesService from './flashes/service';
 import IndexRouter from './index/router';
 import ColorsRouter from './colors/router';
 import BooksRouter from './books/router';
+
+const $ = Orchestra.$;
 
 let app = new Application();
 
@@ -45,4 +47,4 @@ app.books = new BooksRouter({
   container: app.layout.content
 });
 
-Backbone.history.start();
+Orchestra.history.start();

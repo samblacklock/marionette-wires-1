@@ -1,9 +1,9 @@
-import _ from 'lodash';
-import {history} from 'backbone';
-import {ItemView} from 'backbone.marionette';
+import Orchestra from 'orchestra';
 import template from './template.hbs';
 
-export default ItemView.extend({
+const _ = Orchestra._;
+
+export default Orchestra.ItemView.extend({
   template: template,
   tagName: 'nav',
   className: 'header navbar navbar-default navbar-fixed-top',

@@ -1,7 +1,7 @@
-import {Route} from 'backbone-routing';
+import Orchestra from 'orchestra';
 import View from './view';
 
-export default Route.extend({
+export default Orchestra.Route.extend({
   initialize(options = {}) {
     this.container = options.container;
   },
