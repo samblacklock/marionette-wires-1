@@ -32,7 +32,7 @@ export default Orchestra.ItemView.extend({
       nprogress.start();
       this.model.set(this.form);
       storage.save(this.model).then(() => {
-        history.navigate('colors/' + this.model.id, { trigger: true });
+        Orchestra.history.navigate('colors/' + this.model.id, { trigger: true });
       });
     }
   }

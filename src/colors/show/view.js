@@ -53,7 +53,7 @@ export default Orchestra.ItemView.extend({
   },
 
   handleDestroySuccess() {
-    history.navigate('colors', { trigger: true });
+    Orchestra.history.navigate('colors', { trigger: true });
     FlashesService.request('add', {
       timeout : 5000,
       type    : 'info',

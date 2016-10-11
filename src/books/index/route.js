@@ -14,7 +14,7 @@ export default Orchestra.Route.extend({
 
   onEnter() {
     let id = this.collection.first().get('id');
-    history.navigate(`books/${id}`, {
+    Orchestra.history.navigate(`books/${id}`, {
       trigger: true,
       replace: true
     });
